@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pagina dinamica</title>
+        <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/script.js" ></script>
+    </head>
+    <body>
+        <header>
+            <h1>Agregar Productos Din&aacute;micamente</h1>
+        </header>
+        <div id="container">
+            <p>Ejemplo de formulario din&aacute;mico usando <a href="http://bit.ly/NZv9hI" target="_blank" title="para hacer la vida mas facil">Jquery</a> y <a href="http://twitter.github.com/bootstrap/" target="_blanl" title="para hacerlo bonito">bootstrap de twitter</a></p>
+            <form id="f" name="f">
+                <table id="tablaUsuarios" class="table table-bordered" >
+                    <tr>
+                        <th >Marca</th>
+                        <th >Cantidad </th>
+                        <th >Descripcion</th>
+                        <th >valor</th>
+                        <th >Eliminar</th>
+                    </tr>
+                </table>
+                <div id="botones" class="centrar">
+                    <input type="submit" id="guardar" class="btn btn-success" value="Guardar Todos" />
+                    <input type="button" id="newp" class="btn btn-primary" value="A&ntilde;adir producto" />
+                </div>
+                <div id="result" class="centrar">
+                    Aqui se mostrara el resultado
+                </div>
+
+            </form>
+        </div>
+        <footer>
+            Desarrollado por <a href="http://twitter.com/MaoAiz" target="_blank">@MaoAiz</a><br />
+            <a href="http://mauricioaizaga.com" target="_blank">MauricioAizaga.com</a>
+        </footer>
+    </body>
+</html>
