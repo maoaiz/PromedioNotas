@@ -121,7 +121,6 @@ body > #container{
 /*    border:solid thin gray;*/
     margin:0 auto;
     width: 80%;
-    min-height: 400px;
 }
 
 body > #container p{
