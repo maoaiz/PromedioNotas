@@ -1,0 +1,48 @@
+a,a:visited,a:link{
+    color:#5c57f7;
+}
+body > header{
+    padding: 15px 0;
+    text-align: center;
+}
+body > footer{
+    text-align: center;
+    clear: both;
+    padding: 20px 0;
+}
+body > #container{
+/*    border:solid thin gray;*/
+    margin:0 auto;
+    width: 80%;
+    min-height: 400px;
+}
+
+body > #container p{
+    text-align: center;
+}
+#tablaUsuarios{
+    margin: 10px auto;
+    width:90%;
+}
+#tablaUsuarios th{
+    width: 20%;
+}
+#tablaUsuarios td > input{
+    margin: 4px 5px;
+    width: 90%;
+}
+#tablaUsuarios td > input.eliminar{
+    width: 50%;
+}
+.centrar{
+    margin: 0 auto;
+    width: 80%;
+}
+#botones *{
+    margin: 10px;
+    width: 18%;
+    float: right;
+}
+#result{
+    clear: both;
+}

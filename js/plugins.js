@@ -79,6 +79,7 @@ function iniciar(){
     nuevo();
     $("#newp").on("click",nuevo);//si dan click a #newp ejecutar nuevo
     $("#guardar").on("click",guardar);
+    $("input").on("keyup",guardar);
 }
 
 $(document).on("ready",iniciar); // cuando el document esté 'ready' ejecutar la funcion 'iniciar'
