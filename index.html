@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8" />
-        <title>Pagina dinamica</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Promedio de Notas UTP - MauricioAizaga.com</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
         <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/script.js" ></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
         <header>
-            <h1>Agregar Productos Din&aacute;micamente</h1>
+            <h1>Calcular promedio de mis notas</h1>
         </header>
         <div id="container">
-            <p>Ejemplo de formulario din&aacute;mico usando <a href="http://bit.ly/NZv9hI" target="_blank" title="para hacer la vida mas facil">Jquery</a> y <a href="http://twitter.github.com/bootstrap/" target="_blanl" title="para hacerlo bonito">bootstrap de twitter</a></p>
+            <p>Calcula el promedio de notas de un estudiate de la <a href="http://www.utp.edu.co" target="_blank">Universidad Tecnológica de Pereira</a></p>
             <form id="f" name="f">
                 <table id="tablaUsuarios" class="table table-bordered" >
                     <tr>
-                        <th >Marca</th>
-                        <th >Cantidad </th>
-                        <th >Descripcion</th>
-                        <th >valor</th>
+                        <th >Materia</th>
+                        <th >Nota <sup>*</sup></th>
+                        <th >Num. Creditos <sup>*</sup></th>
                         <th >Eliminar</th>
                     </tr>
                 </table>
                 <div id="botones" class="centrar">
-                    <input type="submit" id="guardar" class="btn btn-success" value="Guardar Todos" />
-                    <input type="button" id="newp" class="btn btn-primary" value="A&ntilde;adir producto" />
+                    <input type="button" id="newp" class="btn btn-primary" value="A&ntilde;adir materia" />
+                    <input type="submit" id="guardar" class="btn btn-success" value="Calcular Promedio" />
                 </div>
                 <div id="result" class="centrar">
-                    Aqui se mostrara el resultado
+                    0.0
                 </div>
 
             </form>
@@ -38,5 +51,18 @@
             Desarrollado por <a href="http://twitter.com/MaoAiz" target="_blank">@MaoAiz</a><br />
             <a href="http://mauricioaizaga.com" target="_blank">MauricioAizaga.com</a>
         </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
     </body>
 </html>
