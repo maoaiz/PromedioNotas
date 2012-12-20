@@ -53,7 +53,7 @@ function guardar(e){
             cont++;
         }
         else{
-            promedio += parseInt(materia[1]) * parseInt(materia[2]);
+            promedio += materia[1] * materia[2];
             totalCreditos += parseInt(materia[2]);
             console.log("=" + promedio + " cred: "+ totalCreditos);
 
