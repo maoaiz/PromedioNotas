@@ -48,7 +48,7 @@ function guardar(e){
     var totalCreditos = 0;
     for (i=0;i<nprod;i++){
         $("#result").append(res[i].value);
-        materia.push(parseInt(res[i].value)); //esta linea agrega los datos a nuestro array
+        materia.push(res[i].value); //esta linea agrega los datos a nuestro array
         if(cont < num_campos-1 ){
             cont++;
         }
@@ -56,7 +56,7 @@ function guardar(e){
             promedio += materia[1] * materia[2];
             totalCreditos += parseInt(materia[2]);
             console.log("=" + promedio + " cred: "+ totalCreditos);
-
+            
             materia = [];
             cont=0;
         }
