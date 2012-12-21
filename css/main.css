@@ -137,8 +137,8 @@ body > #container p{
     margin: 4px 5px;
     width: 90%;
 }
-#tablaUsuarios td > input.eliminar{
-    width: 50%;
+#tablaUsuarios th.w30{
+    width: 10%;
 }
 .centrar{
     margin: 0 auto;
@@ -147,17 +147,78 @@ body > #container p{
 }
 #botones *{
     margin: 10px;
-    width: 18%;
 }
 #result{
     clear: both;
     font-size: 60px;
     margin: 30px auto;
+    margin-bottom: 100px;
     padding: 10px;
     text-align: center;
     width: 50%;
 }
 
+/*==================================================*/
+/*                  Inicia Responsive               */                    
+/*==================================================*/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 980px) and (max-width: 1280px) {
+    #tablaUsuarios{
+        width: 70%;
+    }
+    #tablaUsuarios td > input{
+        width: 85%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #tablaUsuarios * td{
+        margin: 0;
+        padding: 0;
+    }
+    #tablaUsuarios td > input{
+        width: 85%;
+    }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    body > #container{
+        width: 95%;
+    }
+    header > h1{
+        font-size: 30px;
+    }
+    #tablaUsuarios * td{
+        margin: 0;
+        padding: 0;
+    }
+    #tablaUsuarios td > input{
+        width: 80%;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body > #container{
+        width: 90%;
+    }
+    header > h1{
+        font-size: 26px;
+    }
+    #tablaUsuarios{
+        width: 100%;
+    }
+    #tablaUsuarios td > input{
+        width: 70%;
+    }
+    #tablaUsuarios td > input.btn{
+        width: auto;
+    }
+}
 
 
 
