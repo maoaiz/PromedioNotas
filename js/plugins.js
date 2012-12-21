@@ -30,7 +30,7 @@ function nuevo(){
         "<td><input name='materia[]' type='text' size='15' placeholder='Materia' required/></td>"+
         "<td><input name='nota[]' type='text' size='10' placeholder='Nota' required/></td>"+
         "<td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' required/></td>"+
-        "<td><input type='button' value='Eliminar' onclick='eliminar(this)' class='btn btn-danger eliminar'></td>"+
+        "<td><input type='button' value='Eliminar' onclick='eliminar(this)' class='btn btn-danger btn-small eliminar'></td>"+
         "</tr>");
 }
 
