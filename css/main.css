@@ -137,7 +137,7 @@ body > #container p{
     margin: 4px 5px;
     width: 90%;
 }
-#tablaUsuarios th.w30{
+#tablaUsuarios th.w20{
     width: 10%;
 }
 .centrar{
@@ -152,12 +152,23 @@ body > #container p{
     clear: both;
     font-size: 60px;
     margin: 30px auto;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     padding: 10px;
     text-align: center;
     width: 50%;
 }
-
+#message{
+    color: #11B0AB;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.social{
+    color: #bbb;
+}
+.eliminar{
+    margin: 0 auto;
+    /*width: 30px;*/
+}
 /*==================================================*/
 /*                  Inicia Responsive               */                    
 /*==================================================*/

@@ -36,28 +36,29 @@
         </header>
         <div id="container">
             <p>Calcula el promedio de notas de un estudiate de la <a href="http://www.utp.edu.co" target="_blank">Universidad Tecnológica de Pereira</a></p>
-            <p>Los campos con <sup>*</sup> son requeridos</p>
+            <div class="centrar social">
+                Comparte &eacute;sta herramienta con tus amigos...<br>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://mauricioaizaga.com/PromedioUTP/" data-text="Calculen su promedio de notas de la @UTPereira con esta web: http://mauricioaizaga.com/PromedioUTP/" data-via="MaoAiz" data-lang="es" data-size="large">Twittear</a><br>
+                <div class="fb-like" data-href="http://mauricioaizaga.com/PromedioUTP/" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
+            </div>
             <form id="f" name="f">
                 <table id="tablaUsuarios" class="table table-bordered" >
                     <tr>
                         <th >Materia</th>
                         <th >Nota <sup>*</sup></th>
                         <th >Num. Creditos <sup>*</sup></th>
-                        <th class="w30">Eliminar</th>
+                        <th class="w20">Eliminar</th>
                     </tr>
                 </table>
                 <p>Utiliza puntos (4.3) en vez de comas (4,3)</p>
+                <p>Los campos con <sup>*</sup> son requeridos</p>
                 <div id="botones" class="centrar">
-                    <input type="button" id="newp" class="btn btn-primary" value="A&ntilde;adir materia" />
                     <input type="submit" id="guardar" class="btn btn-success btn-large" value="Calcular Promedio" />
                 </div>
                 <div id="result" class="centrar">
                     0.0
                 </div>
-                <div class="centrar">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://mauricioaizaga.com/PromedioUTP/" data-text="Calculen su promedio de notas de la @UTPereira con esta web: http://mauricioaizaga.com/PromedioUTP/" data-via="MaoAiz" data-lang="es" data-size="large">Twittear</a><br>
-                    <div class="fb-like" data-href="http://mauricioaizaga.com/PromedioUTP/" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
-                </div>
+                <div id="message" class="centrar"></div>
             </form>
         </div>
         <footer>
