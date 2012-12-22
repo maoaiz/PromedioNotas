@@ -26,15 +26,15 @@ var num_campos=3;
 
 function nuevo(){
     $("#tablaUsuarios").append("<tr>"+
-        "<td><input name='materia[]' type='text' size='15' placeholder='Materia' required/></td>"+
+        "<td><input name='materia[]' type='text' size='15' placeholder='Materia'/></td>"+
         "<td><input name='nota[]' type='text' size='10' placeholder='Nota' required/></td>"+
         "<td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' required/></td>"+
-        "<td><input type='button' value='Eliminar' onclick='eliminar(this)' class='btn btn-danger btn-small eliminar'></td>"+
+        "<td><a href='#' onclick='nuevo()' class='btn btn-primary btn-small' title='Agregar otra materia'><i class='icon-plus icon-white'></i></a> <button type='button' onclick='eliminar(this)' class='btn btn-danger btn-small eliminar' title='Borrar esta materia'><i class='icon-remove icon-white'></i></button></td>"+
         "</tr>");
 }
 
 //Ctrl + Shift + j     para ver la consola (consejo: usa chrome)
-function guardar(e){
+function calcular(e){
     //NOTA: Recuerda SIMPRE VALIDAR los campos del formulario del lado del servidor y el cliente.
     e.preventDefault();
     var res = $("form#f").serializeArray();
@@ -60,10 +60,14 @@ function guardar(e){
         }
     }
     $("#result").text(promedio/totalCreditos);
+    message();
 }
 
 function eliminar(e){
-    $(e).parent().parent().fadeOut(400).remove();
+    var res = $("form#f").serializeArray();
+    if (res.length > num_campos){
+        $(e).parent().parent().fadeOut(400).remove();
+    }
     /**
      * el boton eliminar esta jerarquicamente ubicado asi:
      *      form > table > tr > td > input.eliminar
@@ -71,11 +75,19 @@ function eliminar(e){
      */
 }
 
+function message(){
+    $("#message").empty()
+    var val = parseInt($("#result").text())
+    if( val >= 4){
+        $("#message").text("Felicitaciones! Buen promedio");
+    }
+}
+
 function iniciar(){
     nuevo();
-    $("#newp").on("click",nuevo);//si dan click a #newp ejecutar nuevo
-    $("#guardar").on("click",guardar);
-    $("input").on("keyup",guardar);
+    $(".newp").on("click",nuevo);//si dan click a .newp ejecutar nuevo
+    $("#guardar").on("click",calcular);
+    $("input").on("keyup",calcular);
 }
 
 $(document).on("ready",iniciar); // cuando el document esté 'ready' ejecutar la funcion 'iniciar'
