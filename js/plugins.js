@@ -25,7 +25,6 @@
 var num_campos=3;
 
 function nuevo(){
-    //alert("nuevo")
     $("#tablaUsuarios").append("<tr>"+
         "<td><input name='materia[]' type='text' size='15' placeholder='Materia' required/></td>"+
         "<td><input name='nota[]' type='text' size='10' placeholder='Nota' required/></td>"+
@@ -42,36 +41,33 @@ function guardar(e){
     //console.log(res);//descomenta esta linea y mira la consola, así llegan nuestros datos,
     var nprod = res.length;
     var cont = 0;
-    $("#result").empty();//limpiar la caja
-    var materia = [];//array para cada una de las filas
+    $("#result").empty();//limpiar la caja de notas
+    var materia = [];//array para cada una de las materias
     var promedio = 0;
     var totalCreditos = 0;
     for (i=0;i<nprod;i++){
         $("#result").append(res[i].value);
-        materia.push(res[i].value); //esta linea agrega los datos a nuestro array
+        materia.push(res[i].value); //esta linea agrega cada datos de la materia a un array
         if(cont < num_campos-1 ){
             cont++;
         }
         else{
             promedio += materia[1] * materia[2];
             totalCreditos += parseInt(materia[2]);
-            console.log("=" + promedio + " cred: "+ totalCreditos);
-            
-            materia = [];
+            console.log("Total multiplicacion =" + promedio + " cred: "+ totalCreditos);
+            materia = []; // borramos el array
             cont=0;
         }
     }
     $("#result").text(promedio/totalCreditos);
-    //console.log("materias:" + materias);//materias es un array que contiene n arrays (n materias)
-    
 }
 
 function eliminar(e){
     $(e).parent().parent().fadeOut(400).remove();
-/**
-     * el boton eliminar esta jerarquicamente asi:
+    /**
+     * el boton eliminar esta jerarquicamente ubicado asi:
      *      form > table > tr > td > input.eliminar
-     * por esta razon se debe subir dos posiciones
+     * por esta razon se debe subir dos niveles para eliminar el tr completo.
      */
 }
 
