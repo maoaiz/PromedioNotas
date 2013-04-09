@@ -231,7 +231,13 @@ body > #container p{
     }
 }
 
-
+.github-ribbon img {
+position: fixed;
+top: 0;
+right: 0;
+z-index: 2;
+border: 0;
+}
 
 
 
@@ -355,6 +361,10 @@ body > #container p{
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+@media (max-width: 767px) {
+
+.github-ribbon img {display: none;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
