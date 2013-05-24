@@ -363,10 +363,12 @@ border: 0;
 }
 
 @media (min-width: 1280px) {
-    #ads-actarium{height: auto;}
+    #ads-actarium{height: 133px;}
+    
 }
 @media (min-width: 980px) and (max-width: 1280px) {
     #ads-actarium{height: 133px;}
+    .ads-1{height: 133px;}
 }
 @media (min-width: 768px) and (max-width: 979px) {
     .ads-1{width: 80%}
@@ -381,7 +383,7 @@ border: 0;
     .ads-1{margin:0 auto;width:98%;height: 265px;}
     /*#ads-actarium{height: 256px;}*/
 }
-@media (max-width: 380px) {
+@media (max-width: 385px) {
     .ads-1{margin:0 auto;width:98%;height: 265px;}
     #ads-actarium{height: 265px;}
 }
