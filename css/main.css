@@ -238,8 +238,7 @@ right: 0;
 z-index: 2;
 border: 0;
 }
-
-
+.ads-1{margin:0 auto;width:60%;}
 
 
 
@@ -362,9 +361,23 @@ border: 0;
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-@media (max-width: 767px) {
 
-.github-ribbon img {display: none;
+@media (min-width: 1200px) {
+    #ads-actarium{height: auto;}
+}
+@media (min-width: 980px) and (max-width: 1280px) {
+    #ads-actarium{height: 226px;}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    #ads-actarium{height: 226px;}
+}
+@media (max-width: 767px) {
+    .github-ribbon img {display: none;}
+    .ads-1{margin:0 auto;width:85%;}
+    #ads-actarium{height: 226px;}
+}
+@media (max-width: 480px) {
+    .ads-1{margin:0 auto;width:100%;}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
