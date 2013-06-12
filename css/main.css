@@ -376,32 +376,32 @@ border: 0;
     .github-ribbon img {display: none;}
 }
 @media (min-width: 768px) and (max-width: 979px) {
-    .ads-1{width: 80%}
-    #ads-actarium{height: 200px;}
+    /*.ads-1{width: 80%}
+    #ads-actarium{height: 200px;}*/
 }
 @media (max-width: 767px) {
-    .ads-1{margin:0 auto;width:85%;
+    /*.ads-1{margin:0 auto;width:85%;
         height: 200px;
     }
-    #ads-actarium{height: 200px;}
+    #ads-actarium{height: 200px;}*/
 }
 @media (max-width: 480px) {
-    .ads-1{margin:0 auto;width:98%;
+   /* .ads-1{margin:0 auto;width:98%;
         height: 200px;
     }
-    #ads-actarium{height: 200px;}
+    #ads-actarium{height: 200px;}*/
 }
 @media (max-width: 380px) {
-    .ads-1{margin:0 auto;width:98%;
+    /*.ads-1{margin:0 auto;width:98%;
         height: 256px;
     }
-    #ads-actarium{height: 256px;}
+    #ads-actarium{height: 256px;}*/
 }
 @media (max-width: 320px) {
-    .ads-1{margin:0 auto;width:98%;
+    /*.ads-1{margin:0 auto;width:98%;
         height: 265px;
     }
-    #ads-actarium{height: 265px;}
+    #ads-actarium{height: 265px;}*/
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
