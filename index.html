@@ -18,7 +18,6 @@
         <meta property="og:image" content="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash4/425665_361433323897119_2144552209_n.jpg" />
         <meta property="og:description" content="Aplicación para calcular el promedio de notas de un estudiante de la Universidad Tecnológica de Pereira" />
         <meta name="description" content="Aplicación para calcular el promedio de notas de un estudiante de la Universidad Tecnológica de Pereira" />
-        <meta name="title" content="Calcula Promedio de Notas UTP - MauricioAizaga.com" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="icon" type="image/x-icon" href="favicon.ico"> 
@@ -41,10 +40,11 @@
           js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=138582546256590";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        
+        <div class="ads-2">
+            <iframe id="ads-iframe" frameborder="0" height="auto" src="http://localhost:8001/ads/1" width="100%"></iframe>
+        </div>
         <header>
-            <h1>Promedio de notas finales de semestre</h1>
-            <a href="https://github.com/MaoAiz/PromedioNotasUTP" target="_blank" class="github-ribbon"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+            <h1>Promedio de notas de semestre</h1>
         </header>
         <div id="container">
             <p>Calcula el promedio de notas de un estudiante de la <a href="http://www.utp.edu.co" target="_blank">Universidad Tecnol&oacute;gica de Pereira</a></p>
@@ -68,39 +68,41 @@
                 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script>
             </div>
-            <form id="f" name="f">
-                <table id="tablaUsuarios" class="table table-bordered" >
-                    <tr>
-                        <th >Materia</th>
-                        <th >Nota <sup>*</sup></th>
-                        <th >Num. Creditos <sup>*</sup></th>
-                        <th class="w20">Eliminar</th>
-                    </tr>
-                </table>
-                <p>Utiliza puntos (4.3) en vez de comas (4,3)</p>
-                <p>Los campos con <sup>*</sup> son requeridos</p>
-                <div id="botones" class="centrar">
-                    <input type="submit" id="guardar" class="btn btn-success btn-large" value="Calcular Promedio" />
-                </div>
-                <div id="result" class="centrar">
-                    0.0
-                </div>
-                <div id="message" class="centrar"></div>
-                
-                <div class="ads2" style="width:468px;margin:0 auto;">
-                    <script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-4855505975383310";
-                    /* PromedioUTP2 */
-                    google_ad_slot = "7187336575";
-                    google_ad_width = 468;
-                    google_ad_height = 15;
-                    //-->
-                    </script>
-                    <script type="text/javascript"
-                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
-                </div>
-            </form>
+            <div id="form-container">
+                <form id="f" name="f">
+                    <table id="tablaUsuarios" class="table table-bordered" >
+                        <tr>
+                            <th >Materia</th>
+                            <th >Nota <sup>*</sup></th>
+                            <th >Num. Creditos <sup>*</sup></th>
+                            <th class="w20">Eliminar</th>
+                        </tr>
+                    </table>
+                    <p>Utiliza puntos (4.3) en vez de comas (4,3)</p>
+                    <p>Los campos con <sup>*</sup> son requeridos</p>
+                    <div id="botones" class="centrar">
+                        <input type="submit" id="guardar" class="btn btn-success btn-large" value="Calcular Promedio" />
+                    </div>
+                    <div id="result" class="centrar">
+                        0.0
+                    </div>
+                    <div id="message" class="centrar"></div>
+                    
+                    <div class="ads2" style="width:468px;margin:0 auto;">
+                        <script type="text/javascript"><!--
+                        google_ad_client = "ca-pub-4855505975383310";
+                        /* PromedioUTP2 */
+                        google_ad_slot = "7187336575";
+                        google_ad_width = 468;
+                        google_ad_height = 15;
+                        //-->
+                        </script>
+                        <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                        </script>
+                    </div>
+                </form>
+            </div>
         </div>
         <footer>
             <br>
@@ -120,10 +122,10 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[['_setAccount','UA-25028369-2'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            // var _gaq=[['_setAccount','UA-25028369-2'],['_trackPageview']];
+            // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            // g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            // s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
 </html>

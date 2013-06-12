@@ -110,6 +110,7 @@ a,a:visited,a:link{
 }
 body > header{
     padding: 15px 0;
+    padding-top: 25px;
     text-align: center;
 }
 body > footer{
@@ -239,7 +240,8 @@ z-index: 2;
 border: 0;
 }
 .ads-1{margin:0 auto;width:65%;}
-
+.ads-2{margin:0 auto;width:100%;height: 85px;}
+#ads-iframe{height: 100px;}
 
 
 
@@ -363,11 +365,11 @@ border: 0;
 }
 
 @media (min-width: 1280px) {
-    /*#ads-actarium{height: 133px;}*/
+    /*#ads-daiech{height: 133px;}*/
     
 }
 @media (min-width: 980px) and (max-width: 1280px) {
-    /*#ads-actarium{height: 133px;}*/
+    /*#ads-daiech{height: 133px;}*/
     .ads-1{
         /*height: 133px;*/
         width: 80%}
@@ -377,31 +379,31 @@ border: 0;
 }
 @media (min-width: 768px) and (max-width: 979px) {
     /*.ads-1{width: 80%}
-    #ads-actarium{height: 200px;}*/
+    #ads-daiech{height: 200px;}*/
 }
 @media (max-width: 767px) {
     /*.ads-1{margin:0 auto;width:85%;
         height: 200px;
     }
-    #ads-actarium{height: 200px;}*/
+    #ads-daiech{height: 200px;}*/
 }
 @media (max-width: 480px) {
    /* .ads-1{margin:0 auto;width:98%;
         height: 200px;
     }
-    #ads-actarium{height: 200px;}*/
+    #ads-daiech{height: 200px;}*/
 }
 @media (max-width: 380px) {
     /*.ads-1{margin:0 auto;width:98%;
         height: 256px;
     }
-    #ads-actarium{height: 256px;}*/
+    #ads-daiech{height: 256px;}*/
 }
 @media (max-width: 320px) {
     /*.ads-1{margin:0 auto;width:98%;
         height: 265px;
     }
-    #ads-actarium{height: 265px;}*/
+    #ads-daiech{height: 265px;}*/
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
