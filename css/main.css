@@ -114,6 +114,7 @@ body > header{
     text-align: center;
 }
 body > footer{
+    background-color: rgb(245, 245, 245);
     text-align: center;
     clear: both;
     padding: 20px 0;

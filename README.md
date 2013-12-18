@@ -5,4 +5,4 @@ Formulario para calcular el promedio de notas de un estudiante de la Universidad
 
 Desarrollado por [Mauricio Aizaga](http://twitter.com/MaoAiz)
 
-Disponible en [http://mauricioaizaga.com/PromedioUTP](http://mauricioaizaga.com/PromedioUTP/)
+Disponible en [http://promedioutp.mauricioaizaga.com/](http://promedioutp.mauricioaizaga.com/)
