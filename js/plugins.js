@@ -47,7 +47,7 @@ function calcular(e){
     var totalCreditos = 0;
     for (i=0;i<nprod;i++){
         $("#result").append(res[i].value);
-        materia.push(res[i].value); //esta linea agrega cada datos de la materia a un array
+        materia.push(res[i].value); //esta linea agrega cada dato de la materia a un array
         if(cont < num_campos-1 ){
             cont++;
         }
@@ -59,25 +59,25 @@ function calcular(e){
             cont=0;
         }
     }
-    $("#result").text(promedio/totalCreditos);
+    $("#result").text((promedio/totalCreditos).toFixed(1));
     message();
 }
 
 function eliminar(e){
     var res = $("form#f").serializeArray();
     if (res.length > num_campos){
-        $(e).parent().parent().fadeOut(400).remove();
+        $(e).closest("tr").fadeOut(400).remove();
     }
     /**
      * el boton eliminar esta jerarquicamente ubicado asi:
      *      form > table > tr > td > input.eliminar
-     * por esta razon se debe subir dos niveles para eliminar el tr completo.
+     * por esta razon se debe buscar el tr para eliminarlo.
      */
 }
 
 function message(){
-    $("#message").empty()
-    var val = parseInt($("#result").text())
+    $("#message").empty();
+    var val = parseInt($("#result").text());
     if( val >= 4){
         $("#message").text("Felicitaciones! Buen promedio");
     }
@@ -85,9 +85,9 @@ function message(){
 
 function iniciar(){
     nuevo();
-    $(".newp").on("click",nuevo);//si dan click a .newp ejecutar nuevo
-    $("#guardar").on("click",calcular);
-    $("input").on("keyup",calcular);
+    $(".newp").on("click", nuevo);//si dan click a .newp ejecutar nuevo
+    $("#guardar").on("click", calcular);
+    $("input").on("keyup", calcular);
 }
 
-$(document).on("ready",iniciar); // cuando el document esté 'ready' ejecutar la funcion 'iniciar'
+$(document).on("ready", iniciar); // cuando el document esté 'ready' ejecutar la funcion 'iniciar'
