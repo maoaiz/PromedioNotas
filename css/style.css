@@ -1,0 +1,38 @@
+.b {border:solid thin gray;}
+.ads-1{margin:0 auto;width:65%;height: 95px;}
+.ads-2{margin:0 auto;width:100%;height: 85px;}
+#ads-iframe{height: 100px;}
+.line-separator{border-bottom: 1px solid #eeeeee;height: 1px;margin-top: 5px;margin-bottom: 5px;}
+#header-banner{margin-top: 25px;margin-bottom: 5px;padding-bottom: 0px;}
+.center80{margin: 0 auto;text-align: center;width: 80%;}
+.lead-18{font-size: 18px;}
+#tablaUsuarios th.w20{width: 20%;}
+.text-help{display: inline-block;margin-right: 10px;}
+.congratulations{position: relative;top: -97px;z-index: -1;}
+.white{color: white}
+body > footer{
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    clear: both;
+    padding: 20px 0;
+}
+@media (max-width: 990px) {
+    .ads-1{width: auto;}
+}
+@media (min-width: 990px) {
+    #form-container{width: 900px;margin: 0 auto;}
+}
+#result{
+    clear: both;
+    font-size: 60px;
+    /*margin: 30px auto;
+    margin-bottom: 40px;*/
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+}
+#message{
+    color: #11B0AB;
+    font-size: 30px;
+    margin-bottom: 20px;
+}

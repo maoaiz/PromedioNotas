@@ -1,11 +1,15 @@
 
-var num_campos=3;
-
+NUM_CAMPOS=3;
+MIN_GOOD_AVERAGE = 4.3;
+MIN_EXCELENT_AVERAGE = 4.5;
+MAX_GRADE = 5;
 function newSubject(e){
-	e.preventDefault();
+    var autofocus = "";
+    if (e.type == "click"){autofocus="autofocus";}
+    e.preventDefault();
     $("#tablaUsuarios").append("<tr>"+
         "<td><input name='materia[]' type='text' size='15' placeholder='Materia'/></td>"+
-        "<td><input name='nota[]' type='text' size='10' placeholder='Nota' required autofocus /></td>"+
+        "<td><input name='nota[]' type='number' min='0' max='5' size='10' placeholder='Nota' required " + autofocus + " class='grade' /></td>"+
         "<td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' required /></td>"+
         "<td><a href='#' class='btn btn-primary btn-small new-subject' title='Agregar otra materia'>\
         <span class='glyphicon glyphicon-plus'></span></a>\
@@ -29,7 +33,7 @@ function calculate(e){
     for (i=0;i<nprod;i++){
         $("#result").append(res[i].value);
         materia.push(res[i].value); //esta linea agrega cada dato de la materia a un array
-        if(cont < num_campos-1 ){
+        if(cont < NUM_CAMPOS-1 ){
             cont++;
         }
         else{
@@ -40,20 +44,25 @@ function calculate(e){
             cont=0;
         }
     }
-    $("#result").text((promedio/totalCreditos).toFixed(1));
+    var total = "..."
+    if (! isNaN(promedio/totalCreditos)){
+        total = (promedio/totalCreditos).toFixed(1);
+    }
+    $("#result").text(total).removeClass("white");
     return message();
 }
-
 function calculateGif(e){
 	var v = calculate(e);
-    if( v >= 4.3){
+    goToByScroll("#message");
+    if( v >= MIN_EXCELENT_AVERAGE && v <= MAX_GRADE){
         // $("#messageGif").html("<img src='http://data3.whicdn.com/images/47754974/tumblr_mfwost4yz91s06rcqo1_500_large.gif' />");
-        $("#messageGif").html("<img src='img/gif1.gif' />");
+        $("#messageGif").html("<img src='img/gif1.gif' class='img-thumbnail congratulations' />").fadeIn("slow");
+        $("#result").addClass("white");
     }
 }
 function removeSubject(e){
     var res = $("form#f").serializeArray();
-    if (res.length > num_campos){
+    if (res.length > NUM_CAMPOS){
 		console.log("entra");
         $(this).closest("tr").fadeOut(400).remove();
     }
@@ -63,24 +72,23 @@ function removeSubject(e){
      * por esta razon se debe buscar el tr para eliminarlo.
      */
 }
-
 function message(){
     $("#message, #messageGif").empty();
     var val = parseFloat($("#result").text());
-    if( val >= 4){
+    if( val >= MIN_GOOD_AVERAGE){
         $("#message").text("Felicitaciones! Buen promedio");
     }
-    if( val >= 4.5){
+    if( val >= MIN_EXCELENT_AVERAGE){
         $("#message").html("Wow!!! Qu&eacute; buen promedio! Felicitaciones!");
     }
-    if( val > 5){
+    if( val > MAX_GRADE){
         $("#message").html("Creo que algo anda mal en las cuentas... o.O");
     }
-    goToByScroll("#message");
     return val;
 }
 function main(){
-	newSubject(jQuery.Event("click")); // simulamos un evento
+	newSubject(jQuery.Event("keypress")); // simulamos un evento que no sea un click
+    $("#tablaUsuarios .grade:first").focus();
     $("#guardar").on("click", calculateGif);
 }
 function goToByScroll(element, callback){
