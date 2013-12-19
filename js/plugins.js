@@ -59,7 +59,6 @@ function calcular(e){
             cont=0;
         }
     }
-    // $("#result").text(promedio/totalCreditos);
     $("#result").text((promedio/totalCreditos).toFixed(1));
     message();
 }
