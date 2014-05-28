@@ -10,6 +10,7 @@
 .text-help{display: inline-block;margin-right: 10px;}
 .congratulations{position: relative;top: -97px;z-index: -1;}
 .white{color: white}
+#showCalc div{display: none;}
 body > footer{
     background-color: rgb(245, 245, 245);
     text-align: center;

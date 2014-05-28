@@ -102,6 +102,10 @@
               <div id="result" class="center80">
                   0.0
               </div>
+              <div id="showCalc" class="center80">
+                <a href="#">ver c&aacute;lculo</a>
+                <div>.........</div>
+              </div>
               <div id="messageGif" class="center80"></div>
               <div id="message" class="center80"></div>
           </form>
@@ -111,7 +115,7 @@
     {% for m in materias %}
       <tr>
           <td><input name='materia[]' type='text' size='15' placeholder='Materia' value="{{ m.nombre }}" /></td>
-          <td><input name='nota[]' type='number' min='0' max='5' size='10' placeholder='Nota' value="{{ m.nota }}" required {{ m.autofocus }}  class='grade' /></td>
+          <td><input name='nota[]' type='text' min='0' max='5' size='10' placeholder='Nota' value="{{ m.nota }}" required {{ m.autofocus }}  class='grade' /></td>
           <td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' value="{{ m.creditos }}" required /></td>
           <td><a href='#' class='btn btn-primary btn-small new-subject' title='Agregar otra materia'>
           <span class='glyphicon glyphicon-plus'></span></a>
@@ -138,10 +142,10 @@
     <script src="js/main.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <script>
-        // var _gaq=[['_setAccount','UA-25028369-2'],['_trackPageview']];
-        // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        // g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        // s.parentNode.insertBefore(g,s)}(document,'script'));
+        var _gaq=[['_setAccount','UA-25028369-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
   </body>
 </html>
