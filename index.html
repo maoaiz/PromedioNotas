@@ -114,8 +114,8 @@
     {% for m in materias %}
       <tr>
           <td><input name='materia[]' type='text' size='15' placeholder='Materia' value="{{ m.nombre }}" /></td>
-          <td><input name='nota[]' type='text' min='0' max='5' size='10' placeholder='Nota' value="{{ m.nota }}" required {{ m.autofocus }}  class='grade' /></td>
-          <td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' value="{{ m.creditos }}" required /></td>
+          <td><input name='nota[]' type='text' min='0' max='5' size='10' placeholder='Nota' value="{{ m.nota }}" required {{ m.autofocus }}  class='grade input-number' /></td>
+          <td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' value="{{ m.creditos }}" required class="input-number" /></td>
           <td><a href='#' class='btn btn-primary btn-small new-subject' title='Agregar otra materia'>
           <span class='glyphicon glyphicon-plus'></span></a>
           <button type='button' class='btn btn-danger btn-small remove-subject' title='Borrar esta materia'><span class='glyphicon glyphicon-remove'></span></button></td>
