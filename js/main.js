@@ -145,7 +145,7 @@ function goToByScroll(element, callback){
 }
 $(document).ready(main); // cuando el document esté 'ready' ejecutar la funcion 'main'
 
-$(document).on("keyup", 'input', validateInput);
+$(document).on("keyup", 'input.input-number', validateInput);
 $(document).on("click", ".new-subject", newSubject);//si dan click a .newp ejecutar nuevo
 $(document).on("click", ".remove-subject", removeSubject);//si dan click a .newp ejecutar nuevo
 
